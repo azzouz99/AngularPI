@@ -1,0 +1,57 @@
+<div class="table-container">
+  <h2>Liste Requests:</h2>
+  <table class="table table-striped-columns" class="table-smal">
+    <div class="body table-responsive">
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>request_date</th>
+          <th>amount_req</th>
+          <th>statut</th>
+          <th>description</th>
+          <th>gender</th>
+          <th>monthly_pay</th>
+          <th>term_loan</th>
+          <th>start_repayment</th>
+          <th>Matching</th>
+          <th>offer</th>
+          <th>user</th>
+
+
+
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor='let r of listRequests'>
+          <th scope="row">{{r.id_request}}</th>
+          <td>{{r.request_date}}</td>
+          <td>{{r.amount_req}}</td>
+          <td>{{r.statut}}</td>
+          <td>{{r.description}}</td>
+          <td>{{r.gender}}</td>
+          <td>{{r.monthly_pay}}</td>
+          <td>{{r.term_loan}}</td>
+          <td>{{r.start_repayment}}</td>
+          <td>{{r.id_AccOrRef}}</td>
+          <td>{{r.offers_credit}}</td>
+          <td>{{r.user}}</td>
+
+
+
+
+
+
+
+          <td> <div class="form-group">
+            <input class="btn btn-danger" type="submit" name="submit_reg" value="delete" (click)="deleteRequest(r.id_request)">
+          </div></td>
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </table>
+</div>
