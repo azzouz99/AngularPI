@@ -1,0 +1,40 @@
+<div class="table-container">
+  <h2>Matchings By IdRequest:</h2>
+  <table class="table table-striped-columns" class="table-smal">
+    <div class="body table-responsive">
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>check-loan</th>
+          <th>request</th>
+
+
+
+
+
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor='let a of listMatchings'>
+          <th scope="row">{{a.id_AccOrRef}}</th>
+          <td>{{a.check_loan}}</td>
+          <td>{{a.id_request}}</td>
+
+
+
+
+
+
+
+
+
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </table>
+</div>

@@ -1,0 +1,38 @@
+<div class="table-container">
+<h2>Liste D'Offers-Credits:</h2>
+<table class="table table-striped-columns" class="table-smal">
+<div class="body table-responsive">
+
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>credit</th>
+      <th>max_amount</th>
+      <th>min_amount</th>
+      <th>interest_rate</th>
+      <th>date_creation</th>
+      <th>repayment_period</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor='let u of listOffers'>
+      <th scope="row">{{u.id_offer}}</th>
+      <td>{{u.credit}}</td>
+      <td>{{u.max_amount}}</td>
+      <td>{{u.min_amount}}</td>
+      <td>{{u.interest_rate}}</td>
+      <td>{{u.date_creation}}</td>
+      <td>{{u.repayment_period}}</td>
+
+      <td> <div class="form-group">
+        <input class="btn btn-danger" type="submit" name="submit_reg" value="delete" (click)="deleteOffer(u.id_offer)">
+      </div></td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+</table>
+</div>

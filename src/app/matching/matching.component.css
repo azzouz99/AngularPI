@@ -1,0 +1,53 @@
+/* Style de la table */
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: #5c636a;
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 80%;
+}
+
+/* Style de la tête de la table */
+thead {
+  background-color: #0b0b0b;
+  color: #fff;
+}
+.table-container {
+  margin: 0 auto; /* centrer horizontalement */
+  max-width: 800px; /* limiter la largeur pour éviter que le tableau ne devienne trop large */
+}
+
+/* Style des cellules de la table */
+td,
+th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  text-align: left;
+}
+.table td, .table th {
+  color: white;
+}
+
+
+/* Style des cellules de la tête de la table */
+th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Style des boutons de suppression */
+.btn-primary {
+  color: #6a1a21;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  color: #f0f0f0;
+  background-color: #c8cbcf;
+  border-color: #bd2130;
+}
