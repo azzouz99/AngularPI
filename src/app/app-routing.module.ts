@@ -7,6 +7,12 @@ import {RequestComponent} from "./request/request.component";
 import {MatchingComponent} from "./matching/matching.component";
 import { EventComponent } from './component/event/event.component';
 import { AddeventComponent } from './addevent/addevent.component';
+import { ShareholderComponent } from './component/shareholder/shareholder.component';
+import { AddshareholderComponent } from './addshareholder/addshareholder.component';
+import { HistoryComponent } from './history/history.component';
+import { InfoEventComponent } from './component/info-event/info-event.component';
+import { InfoshareHolerComponent } from './component/infoshare-holer/infoshare-holer.component';
+
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -16,7 +22,12 @@ const routes: Routes = [
   {path:"Matching",component:MatchingComponent},
   {path:"Event",component:EventComponent},
   {path:"AddEvent",component:AddeventComponent},
-
+  {path:"Shareholder",component:ShareholderComponent},
+  {path:"AddShareholder",component:AddshareholderComponent},
+  {path:"history",component:HistoryComponent},
+  {path:"infoEvent",component:InfoEventComponent},
+  {path:"infoShareHolder",component:InfoshareHolerComponent},
+  
 ];
 
 @NgModule({

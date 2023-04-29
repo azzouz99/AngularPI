@@ -53,3 +53,28 @@
     border-color: #bd2130;
   }
   
+  .hitory{
+    margin-left: 80px;
+    padding: 80px;
+    padding-left: 200px;
+}
+.hitory h1{
+ margin-bottom: 50px;
+}
+table {
+    width: 100%;
+  }
+  .buttons{
+  margin-right: 20px;
+  background-color: #bd2130;
+
+  }
+  .button-u{
+    margin-right: 20px;  
+    }
+
+    .somme{
+      text-align: right;
+      margin-right: 300px;
+     margin-top: 100px;
+    }

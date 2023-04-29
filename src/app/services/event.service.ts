@@ -24,4 +24,19 @@ export class EventService {
   getEvent(Id : number){
     return  this.httpClient.get(`${this.API_URL}/get/${Id}`)
   }
+  getTotalInvestment(Id :number){
+    return  this.httpClient.get(`${this.API_URL}/${Id}/totalInvestment`)
+  }
+  getArchive(){
+    return  this.httpClient.get(`${this.API_URL}/getArchive`)
+  }
+  reportevent(Id:number, jour:number){
+    return  this.httpClient.get(`${this.API_URL}/events/${Id}/reported/${jour}`)
+  }
+  cancelEvent(Id : number){
+    return  this.httpClient.get(`${this.API_URL}/events/${Id}/cancel`)
+  }
+  statEvent(){
+    return  this.httpClient.get(`${this.API_URL}/eventinfoStat`)
+  }
 }

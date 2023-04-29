@@ -1,0 +1,51 @@
+
+  <div class="hitory">
+    <h1>list des Shareholder :</h1>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Name Column -->
+        <ng-container matColumnDef="prenom">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastNameShareholder}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="investissement">
+            <th mat-header-cell *matHeaderCellDef> investment </th>
+            <td mat-cell *matCellDef="let element"> {{element.investment}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+          <ng-container matColumnDef="numtel">
+            <th mat-header-cell *matHeaderCellDef> numTel </th>
+            <td mat-cell *matCellDef="let element"> {{element.numTel}} </td>
+          </ng-container>
+          <ng-container matColumnDef="partner">
+            <th mat-header-cell *matHeaderCellDef> partner </th>
+            <td mat-cell *matCellDef="let element"> {{element.partner}} </td>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element">
+              <button type="button" class="btn btn-default button-u" aria-label="Left Align"
+                (click)="updateShareholder(element)"
+              >
+                update
+              </button>
+              <button type="button" class="btn btn-default buttons" aria-label="Left Align"
+              (click)="deleteShareholder(element)"
+              >
+                delete
+              </button>
+            </td>
+          </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      
+</div>
+               
+

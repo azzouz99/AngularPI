@@ -1,15 +1,29 @@
 import {TypeEvent} from "./TypeEvent";
 import {EventStatus} from "./EventStatus";
+import { Shareholder } from "./Shareholder";
 export class Event {
 //Users:User[];
- // ShareHolders:ShareHolder[];
-id_event: any;
-name_event: any;
-date_event: any;
-description_event: any;
+idEvent: any;
+nameEvent: any;
+dateEvent: any;
+descriptionEvent: any;
 type: any;
 domain: any;
-like: any;
-dislike: any;
-event_status: any;
+likes: any;
+dislikes: any;
+eventStatus: any;
 }
+
+export class Events {
+    //Users:User[];
+    idEvent: any;
+    nameEvent: any;
+    dateEvent: any;
+    descriptionEvent: any;
+    type: any;
+    domain: any;
+    likes: any;
+    dislikes: any;
+    eventStatus: any;
+    }
+    
