@@ -31,6 +31,9 @@ export class ShareholderService {
     return  this.httpClient.get(`${this.API_URL}/partnerStat`)
   }
   calculrendement(id:any,taux:any){
-    return  this.httpClient.get(`${this.API_URL}//calculrendement/${id}/${taux}`)
+    return  this.httpClient.get(`${this.API_URL}/calculrendement/${id}/${taux}`)
+  }
+  calculateROI(idP:any,IdE:any){
+    return  this.httpClient.get(`${this.API_URL}/calculateROI/${idP}/${IdE}`)
   }
 }

@@ -27,6 +27,9 @@ import { UpdateSharholderComponent } from './component/update-sharholder/update-
 import { ReportPopUpComponent } from './component/report-pop-up/report-pop-up.component';
 import { InfoEventComponent } from './component/info-event/info-event.component';
 import { InfoshareHolerComponent } from './component/infoshare-holer/infoshare-holer.component';
+import { TauxComponent } from './component/taux/taux.component';
+import { RoiComponent } from './component/roi/roi.component';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -49,22 +52,25 @@ import { InfoshareHolerComponent } from './component/infoshare-holer/infoshare-h
     ReportPopUpComponent,
     InfoEventComponent,
     InfoshareHolerComponent,
-  
+    TauxComponent,
+    RoiComponent,
+
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    MatDialogModule,
-    MatIconModule,
-    ReactiveFormsModule ,
-    BrowserAnimationsModule,
-    MatTableModule
-    
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        MatDialogModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        MatSelectModule
 
-  ],
+
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

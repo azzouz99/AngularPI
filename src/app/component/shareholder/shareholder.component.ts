@@ -3,6 +3,8 @@ import {ShareholderService} from "../../services/shareholder.service";
 import {Shareholder} from "../../Models/Shareholder";
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { UpdateSharholderComponent } from '../update-sharholder/update-sharholder.component';
+import {TauxComponent} from "../taux/taux.component";
+import {RoiComponent} from "../roi/roi.component";
 @Component({
   selector: 'app-shareholder',
   templateUrl: './shareholder.component.html',
@@ -15,14 +17,14 @@ export class ShareholderComponent implements OnInit {
   Shareholderupdate:any;
   displayedColumns: string[] = ['prenom', 'investissement', 'email', 'numtel','partner', 'actions'];
   dataSource:any;
-  id:any; 
-  taux:any; 
+  id:any;
+  taux:any;
   rendement:any;
   constructor(private ShareholderService:ShareholderService,public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    id:null; 
-    taux:null; 
+    id:null;
+    taux:null;
     rendement:null;
     this.getAllShareholder();
      this.Shareholder={
@@ -41,7 +43,7 @@ export class ShareholderComponent implements OnInit {
     });
   }
 
-  
+
   deleteShareholder(element:any) {
     this.ShareholderService.deleteShareholder(element.idShareholder).subscribe(() => this.getAllShareholder(),res=>{this.listShareholder=res});
   }
@@ -77,5 +79,17 @@ export class ShareholderComponent implements OnInit {
   }
   calculrendement() {
     this.ShareholderService.calculrendement(this.dialog,this.taux).subscribe((res)=>{this.rendement=res});
+  }
+  calculShareholder(element :any){
+     const dialogRef = this.dialog.open(TauxComponent, {
+      width:'600px',
+      data:element
+    });
+  }
+  calculRoi(element :any){
+    const dialogRef = this.dialog.open(RoiComponent, {
+      width:'400px',
+      data:element
+    });
   }
 }

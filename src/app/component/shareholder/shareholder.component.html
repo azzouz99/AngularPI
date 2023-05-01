@@ -39,18 +39,23 @@
                 delete
               </button>
               <button type="button" class="btn btn-default buttons" aria-label="Left Align"
-             
+                      (click)="calculShareholder(element)"
               >
                 calcul rendement
               </button>
+              <button type="button" class="btn btn-default buttons" aria-label="Left Align"
+                      (click)="calculRoi(element)"
+              >
+                calcul ROI
+              </button>
             </td>
           </ng-container>
-  
+
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
-      
-      
+
+
 </div>
 <!--<input type="number" class="form-control" name="tauxint"   #tauxint="ngModel" [(ngModel)] = "taux" placeholder="entrer le taux d'interet">
 <button type="button" class="button1" (click)="van(Offerupdate.id)">calcul</button>
