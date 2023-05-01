@@ -30,4 +30,7 @@ export class ShareholderService {
   statShareholde(){
     return  this.httpClient.get(`${this.API_URL}/partnerStat`)
   }
+  calculrendement(id:any,taux:any){
+    return  this.httpClient.get(`${this.API_URL}//calculrendement/${id}/${taux}`)
+  }
 }

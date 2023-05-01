@@ -39,4 +39,7 @@ export class EventService {
   statEvent(){
     return  this.httpClient.get(`${this.API_URL}/eventinfoStat`)
   }
+  affichageeventbyshareholder(name:any,prenom:any){
+    return  this.httpClient.get(`${this.API_URL}/getEventByShareholder/${name}/${prenom}`)
+  }
 }

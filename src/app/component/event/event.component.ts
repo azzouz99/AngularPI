@@ -18,6 +18,7 @@ export class EventComponent implements OnInit {
   dataSource:any
   idEvent1:any;
   listEvents:any;
+  listt:any;
   form : boolean = false;
   Event!: Event;
   Eventupdate!:Event;
@@ -25,10 +26,15 @@ export class EventComponent implements OnInit {
   listEvent:any;
   visible!:boolean;
   nbjours!:number;
+  nom:any; 
+  prenom:any;
   constructor(private EventService:EventService,public dialog: MatDialog) {
 
   }
   ngOnInit(): void {
+    nom:null; 
+    prenom:null;
+
     this.visible=false;
     this.getArchive();
     this.getAllEvents();
@@ -145,5 +151,7 @@ calculerInvestissement(element :any){
       this.somme=res
   })
 }
-
+affichageeventPartner(){
+  this.EventService.affichageeventbyshareholder(this.nom,this.prenom).subscribe(res=>{this.listt=res})
+}
   }

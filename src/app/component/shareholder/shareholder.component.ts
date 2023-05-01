@@ -14,10 +14,16 @@ export class ShareholderComponent implements OnInit {
   Shareholder!: Shareholder;
   Shareholderupdate:any;
   displayedColumns: string[] = ['prenom', 'investissement', 'email', 'numtel','partner', 'actions'];
-  dataSource:any
+  dataSource:any;
+  id:any; 
+  taux:any; 
+  rendement:any;
   constructor(private ShareholderService:ShareholderService,public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    id:null; 
+    taux:null; 
+    rendement:null;
     this.getAllShareholder();
      this.Shareholder={
       idShareholder:null,
@@ -68,5 +74,8 @@ export class ShareholderComponent implements OnInit {
         console.log("not updated");
       }
     });
+  }
+  calculrendement() {
+    this.ShareholderService.calculrendement(this.dialog,this.taux).subscribe((res)=>{this.rendement=res});
   }
 }
