@@ -1,0 +1,3 @@
+export enum Type_transaction {
+    INTEREST,WITHDRAW,DEPOSIT,INCOME,RETURN,INVESTMENT,PRET
+}

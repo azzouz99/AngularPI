@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Pending Investments List:</h2>
+    
+
+ 
+    <div *ngFor="let u of investments; let i = index;">
+        <ng-container *ngIf="i % 2 == 0">
+            <div class="row">
+            
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{investments[i].project_name}}</h5>
+              <p class="card-text">{{investments[i].description}}</p>
+              <a (click)="openInvestmentDetail(investments[i].id_invest)" class="btn btn-primary">Check</a>
+              <a (click)="AcceptInv(investments[i].id_invest)" class="btn btn-success">Accept</a>
+              <a (click)="RefuseInv(investments[i].id_invest)" class="btn btn-danger">Refuse</a>
+            </div>
+          </div>
+        </div>
+        <ng-container *ngIf="i+1< investments.length">
+      <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{investments[i+1].project_name}}</h5>
+              <p class="card-text">{{investments[i+1].description}}</p>
+              <a (click)="openInvestmentDetail(investments[i+1].id_invest)" class="btn btn-primary">Check</a>
+              <a (click)="AcceptInv(investments[i].id_invest)" class="btn btn-success">Accept</a>
+              <a (click)="RefuseInv(investments[i].id_invest)" class="btn btn-danger">Refuse</a>
+            </div>
+          </div>
+        </div> 
+        </ng-container>
+      </div>
+      </ng-container>
+    </div> 
+    <div class="pagination">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+

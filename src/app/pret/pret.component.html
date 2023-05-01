@@ -1,0 +1,44 @@
+<div class="container">
+    <h2>Liste des Pret:</h2>
+    <table class="table" class="table float-left">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Owner Email</th>
+            <th scope="col">amount</th>
+            <th scope="col">investmentPeriodInMonths</th>
+            <th scope="col">Debut</th>
+            <th scope="col">Fin</th>
+            <th scope="col">Interest</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor='let pret of prets | paginate: { itemsPerPage: 6, currentPage: p }'>
+            <th scope="row">{{pret.id_pret}}</th>
+            <td>{{userEmail(pret.id_pret)}}</td>
+            <td>{{pret.amount}}</td>
+            <td>{{pret.investmentPeriodInMonths}}</td>
+            <td>{{pret.date_inv}}</td>
+            <td>{{pret.datefin}}</td>
+            <td>{{pret.Interest}}</td>
+            
+         
+          </tr> 
+     
+        </tbody>
+      </table>
+  <!--  <div *ngFor='let pret of prets | paginate: { itemsPerPage: 6, currentPage: p }' class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title{{pret.id_pret}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div> {{userEmail()}}-->
+      <div class="pagination">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+</div>
+
+

@@ -1,0 +1,49 @@
+<div class="container">
+  <h2>Liste des Transactions:</h2>
+  
+    <!-- Content on the left side of the page -->
+    
+<!--  <button (click)="showForm = !showForm">Add new item</button>
+  <form *ngIf="showForm">
+     <button type="submit">Save</button>
+  </form> -->
+    <!-- form fields here -->
+  
+
+    <table  class="table table-dark">
+    <thead >
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Sender</th>
+        <th scope="col">Receiver</th>
+        <th scope="col">Time</th>
+        <th scope="col">Type</th>
+        <th scope="col">Value</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let u of transactions | paginate: { itemsPerPage: 4, currentPage: p }'>
+        <th scope="row">{{u.id_transaction}}</th>
+        <td>{{u.email_sender}}</td>
+        <td>{{u.email_receiver}}</td>
+        <td>{{u.date_transaction}}</td>
+        <td>{{u.type}}</td>
+        <td>{{u.value}}</td>
+      
+      </tr>
+ 
+    </tbody>
+  </table>
+  <div class="pagination">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+  <button (click)="showWithdrawForm()">Withdraw</button>
+<div id="withdraw-form" style="display: none;">
+ 
+</div>
+  </div>
+
+  
+  
+

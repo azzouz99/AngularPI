@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+ 
+  .mat-dialog-container {
+    background-color: #a2a2aa;
+  }
+  .custom-dialog-backdrop-class {
+    background-color: rgba(0, 0, 0, 0.5);
+  }

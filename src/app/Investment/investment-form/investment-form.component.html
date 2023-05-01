@@ -1,0 +1,31 @@
+<div class="card border-success mb-3" style="width: 18rem;">
+  
+    <div class="card-body">
+      <h5 class="card-title">{{investment.project_name}}</h5>
+      <p class="card-text">{{investment.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Owner ID :
+            <input class="form-control" type="text" placeholder={{investment.owner_id}} readonly>
+          </li>
+      <li class="list-group-item">Amount Invested :
+        <input class="form-control" type="text" placeholder={{investment.amount_inv}} readonly>
+      </li>
+      <li class="list-group-item">Amount Requested :
+        <input class="form-control" type="text" placeholder={{investment.invest_value}} readonly>
+      </li>
+      <li class="list-group-item">Status : 
+        <input class="form-control" type="text" placeholder= {{investment.status}} readonly>
+    </li>
+    <li class="list-group-item">Starting Date : 
+        <input class="form-control" type="text" placeholder= {{investment.date_debut}} readonly>
+    </li>
+    <li class="list-group-item">Ending Date : 
+        <input class="form-control" type="text" placeholder= {{investment.date_fin}} readonly>
+    </li>
+    </ul>
+    <div class="card-body">
+      <a (click)="close()" class="card-link">Exit</a>
+     
+    </div>
+  </div>
