@@ -1,0 +1,41 @@
+/* Fond dégradé */
+.bg-image {
+  background: linear-gradient(180deg, #1c87c9 0%, #5c5edc 100%);
+  background-image: url('../../assets/finance.avif');
+
+}
+
+/* Carte */
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background-color: #ff7f50; /* orange */
+  color: #fff; /* texte blanc */
+}
+
+
+.card-body {
+  padding: 30px;
+}
+
+/* Bouton */
+.btn-primary {
+  background-color: #4169e1; /* bleu */
+  border-color: #4169e1; /* bordure bleue */
+}
+
+.btn-primary:hover {
+  background-color: #1e90ff; /* bleu clair */
+  border-color: #1e90ff; /* bordure bleue clair */
+}
+
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+}
