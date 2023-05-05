@@ -10,7 +10,7 @@ describe('ShareholderComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ShareholderComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

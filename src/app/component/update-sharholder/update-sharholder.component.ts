@@ -25,7 +25,7 @@ export class UpdateSharholderComponent implements OnInit {
     public form: FormBuilder,
     private EventService:EventService,
     private ShareholderService :ShareholderService
-  ) { 
+  ) {
     this.Shareholder = new Shareholder()
   }
 
@@ -42,16 +42,16 @@ export class UpdateSharholderComponent implements OnInit {
     console.log(this.data)
   }
   updateEvent(){
-    this.Shareholder.idShareholder=this.data.idShareholder  
+    this.Shareholder.idShareholder=this.data.idShareholder
     this.Shareholder.lastNameShareholder=this.formupdate.get('lastNameShareholder')?.value
     this.Shareholder.firstNameShareholder=this.formupdate.get('firstNameShareholder')?.value
     this.Shareholder.investment=this.formupdate.get('investment')?.value
     this.Shareholder.email=this.formupdate.get('email')?.value
     this.Shareholder.numTel=this.formupdate.get('numTel')?.value
     this.Shareholder.partner=this.formupdate.get('partner')?.value
-   this.ShareholderService.updateShareholder(this.Shareholder).subscribe(res=>{
-    this.dialogRef.close(true)
-   })
+    this.ShareholderService.updateShareholder(this.Shareholder).subscribe(res=>{
+      this.dialogRef.close(true)
+    })
 
   }
   onNoClick(){

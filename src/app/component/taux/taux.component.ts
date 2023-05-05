@@ -9,7 +9,7 @@ import {ShareholderService} from "../../services/shareholder.service";
   styleUrls: ['./taux.component.css']
 })
 export class TauxComponent implements OnInit {
-taux:any
+  taux:any
   rendement:any
   rendementShareHolder:any
   show:boolean=true
@@ -22,13 +22,13 @@ taux:any
 
   ngOnInit(): void {
   }
-calculer(){
-  this.share.calculrendement(this.data.idShareholder,this.rendement).subscribe(res=>{
-    this.rendementShareHolder=res
-    this.show=true
-  })
-}
-cancel(){
-  this.dialogRef.close(true)
-}
+  calculer(){
+    this.share.calculrendement(this.data.idShareholder,this.rendement).subscribe(res=>{
+      this.rendementShareHolder=res
+      this.show=true
+    })
+  }
+  cancel(){
+    this.dialogRef.close(true)
+  }
 }

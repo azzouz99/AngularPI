@@ -13,7 +13,9 @@
       <th>interest_rate</th>
       <th>date_creation</th>
       <th>repayment_period</th>
-      <th></th>
+      <th>delete</th>
+      <th>update</th>
+      <th>Statistic</th>
     </tr>
     </thead>
     <tbody>
@@ -30,9 +32,21 @@
         <input class="btn btn-danger" type="submit" name="submit_reg" value="delete" (click)="deleteOffer(u.id_offer)">
       </div></td>
 
+     <td> <div class="form-group">
+        <button routerLink="/update" class="btn btn-warning">update</button>
+      </div></td>
+      <td> <button class="btn btn-warning" (click)="Onsubmint(u.id_offer)">statistic</button></td>
+
     </tr>
     </tbody>
   </table>
 </div>
 </table>
+  <h2>Statistiques des offres de crédit</h2>
+  <div *ngIf="statistics">
+    <h1>Offre ID: {{ statistics.id_offer }}</h1>
+    <h1>Nombre de demandes acceptées: {{ statistics.acceptedRequests }}</h1>
+    <h1>Nombre de demandes refusées: {{ statistics.rejectedRequests }}</h1>
+    <h1>Nombre de demandes en attente: {{ statistics.pendingRequests }}</h1>
+  </div>
 </div>

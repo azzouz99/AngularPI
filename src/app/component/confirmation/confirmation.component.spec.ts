@@ -10,7 +10,7 @@ describe('ConfirmationComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ConfirmationComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

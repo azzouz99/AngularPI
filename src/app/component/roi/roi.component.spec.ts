@@ -10,7 +10,7 @@ describe('RoiComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ RoiComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

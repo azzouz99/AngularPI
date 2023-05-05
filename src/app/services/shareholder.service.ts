@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Shareholder } from '../Models/Shareholder';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +37,9 @@ export class ShareholderService {
   }
   calculateROI(idP:any,IdE:any){
     return  this.httpClient.get(`${this.API_URL}/calculateROI/${idP}/${IdE}`)
+  }
+
+  listShareHolderFromService(idEvent:number):Observable<Shareholder[]>{
+    return this.httpClient.get<Shareholder[]>(`${this.API_URL}/listshareholders/${idEvent}`);
   }
 }

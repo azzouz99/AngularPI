@@ -10,7 +10,7 @@ describe('UpdateSharholderComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ UpdateSharholderComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

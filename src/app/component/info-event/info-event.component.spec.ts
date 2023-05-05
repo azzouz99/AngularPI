@@ -10,7 +10,7 @@ describe('InfoEventComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ InfoEventComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

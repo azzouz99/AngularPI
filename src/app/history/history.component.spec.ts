@@ -10,7 +10,7 @@ describe('HistoryComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ HistoryComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -10,7 +10,7 @@ describe('AddshareholderComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ AddshareholderComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -23,3 +23,4 @@ describe('AddshareholderComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

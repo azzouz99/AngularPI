@@ -1,20 +1,29 @@
 <div class="table-container">
-  <h2>Matchings By IdRequest:</h2>
+  <h2>Matchings By Request:</h2>
   <table class="table table-striped-columns" class="table-smal">
     <div class="body table-responsive">
+      <div class="form-group">
+        <label for="periode"><span class="req">* </span> The Request's Number: </label>
+        <input class="form-control" type="text" [(ngModel)]="id_req" name="periode" id="periode" required
+               placeholder="Enter Recent Request" />
+        <div id="errrrrrFirst"></div>
+      </div>
+      <div class="form-group">
+        <input class="btn btn-success" type="submit" name="submit_reg" value="Send" (click)="matching(id_req)">
+      </div>
 
       <table class="table table-bordered">
         <thead>
         <tr>
           <th>#</th>
-          <th>check-loan</th>
-          <th>request</th>
+          <th>Check-loan</th>
+          <th>Request Number</th>
 
 
 
 
 
-          <th></th>
+
         </tr>
         </thead>
         <tbody>

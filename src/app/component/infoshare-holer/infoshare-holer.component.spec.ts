@@ -10,7 +10,7 @@ describe('InfoshareHolerComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ InfoshareHolerComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

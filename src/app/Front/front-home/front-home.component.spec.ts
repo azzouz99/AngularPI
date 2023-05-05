@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShareholderComponent } from './shareholder.component';
+import { FrontHomeComponent } from './front-home.component';
 
-describe('ShareholderComponent', () => {
-  let component: ShareholderComponent;
-  let fixture: ComponentFixture<ShareholderComponent>;
+describe('FrontHomeComponent', () => {
+  let component: FrontHomeComponent;
+  let fixture: ComponentFixture<FrontHomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShareholderComponent ]
+      declarations: [ FrontHomeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShareholderComponent);
+    fixture = TestBed.createComponent(FrontHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

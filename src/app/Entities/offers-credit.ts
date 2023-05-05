@@ -1,6 +1,6 @@
 import {Request} from "./request";
 
-export interface OffersCredit {
+export class OffersCredit {
   id_offer:any;
   credit: any;
   max_amount:any;
@@ -8,6 +8,7 @@ export interface OffersCredit {
   interest_rate:any;
   date_creation:any;
   repayment_period:any;
+
 
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Request} from "../Entities/request";
 import {RequestService} from "../reqService/request.service";
+import {OffersCredit} from "../Entities/offers-credit";
 
 
 
@@ -34,18 +35,6 @@ export class RequestComponent implements OnInit {
       monthly_pay:null,
       term_loan:null,
       start_repayment:null,
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
   }

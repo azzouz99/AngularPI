@@ -10,7 +10,7 @@ describe('TauxComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ TauxComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

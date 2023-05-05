@@ -10,7 +10,7 @@ describe('ReportPopUpComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ReportPopUpComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

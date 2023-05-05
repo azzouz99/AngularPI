@@ -41,7 +41,7 @@ export class HistoryComponent implements OnInit {
         this.dataSource =res
         console.log( 'data',  this.dataSource)
       }
-      );
-   }
+    );
+  }
 
 }

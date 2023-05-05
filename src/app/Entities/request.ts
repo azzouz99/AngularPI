@@ -1,4 +1,4 @@
-
+import {OffersCredit} from "./offers-credit";
 
 
 export class Request {
@@ -11,8 +11,6 @@ export class Request {
   monthly_pay:any;
   term_loan:any;
   start_repayment:any;
-
-
 
 
 

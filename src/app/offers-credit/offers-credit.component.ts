@@ -11,6 +11,11 @@ export class OffersCreditComponent implements OnInit {
   listOffers:any;
   form : boolean = false;
   offers_credit!: OffersCredit;
+  input:any;
+  liststat: any;
+  statistics: any;
+
+
 
   constructor(private offerService: OffersCreditService) { }
 
@@ -35,11 +40,13 @@ export class OffersCreditComponent implements OnInit {
   getOffer(){
     this.offerService.getOffer().subscribe(res=>this.listOffers=res)
   }
-  editOffer(offer:OffersCredit){
-    this.offerService.editOffer(offer).subscribe();
-  }
+
   deleteOffer(id:any){
     this.offerService.deleteOffer(id).subscribe(()=>this.getOffer())
+  }
+
+  Onsubmint(id:any) {
+      this.offerService.offerStatics(id).subscribe(res=> this.statistics = res)
   }
 
 

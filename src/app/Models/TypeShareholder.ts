@@ -1,4 +1,3 @@
 export enum TypeShareholder{
-    SUPPLIER, ASSOCIATION, BANK
-  }
-  
+  SUPPLIER, ASSOCIATION, BANK
+}

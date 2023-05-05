@@ -1,0 +1,24 @@
+<div class="table-container">
+
+  <table class="table table-striped-columns" class="table-smal">
+    <div class="body table-responsive">
+
+     <h2>Statistiques des offres de crédit</h2>
+      <form (click)="Onsubmint()" >
+        <label>ID de l'offre:</label>
+        <input type="number" [(ngModel)]="input" name="offerId" width="20" height="10">
+        <button type="submit" class="btn btn-primary">Obtenir les statistiques</button>
+      </form>
+
+      <div *ngIf="statistics">
+        <h1>Offre ID: {{ statistics.offerId }}</h1>
+        <h1>Nombre de demandes acceptées: {{ statistics.acceptedRequests }}</h1>
+        <h1>Nombre de demandes refusées: {{ statistics.rejectedRequests }}</h1>
+        <h1>Nombre de demandes en attente: {{ statistics.pendingRequests }}</h1>
+      </div>
+
+      <!-- Afficher la liste des statistiques des offres -->
+
+    </div>
+  </table>
+</div>

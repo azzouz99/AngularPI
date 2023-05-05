@@ -11,7 +11,7 @@ describe('EventComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ EventComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
