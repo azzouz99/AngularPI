@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div class="card-header bg-primary text-white text-center">
+            <h4>Add New User</h4>
+          </div>
+          <div class="card-body">
+            <form class="form-signin">
+                <label for="avatar">Avatar:</label>
+                <img [src]="avatarUrl || '../assets/images/utilisateur.png'" class="avatar">
+                <input type="file" name="avatar" accept="image/*" [(ngModel)]="user.profile_picture" class="form-control" 
+                required #p="ngModel" (change)="onFileSelected($event)">
+                
+              <label for="fName" class="sr-only">First name</label>
+              <input type="text" name="nom"
+              [(ngModel)]="user.user_firstname"class="form-control"
+              required #p="ngModel"  placeholder="First name">
+              <label for="lName" class="sr-only">Last name</label>
+              <input type="text" name="prenom"
+              [(ngModel)]="user.user_lastname"class="form-control"
+              required #p="ngModel" placeholder="Last Name">
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="text" name="mail"
+                [(ngModel)]="user.email"class="form-control"
+                required #p="ngModel" placeholder="E-mail">
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="text" name="password"
+              [(ngModel)]="user.user_password"class="form-control"
+              required #p="ngModel" placeholder="Password">    
+              <label for="role" class="sr-only">Role</label>
+              <select name="role" [(ngModel)]="user.role" class="form-control" required #p="ngModel">
+                <option value="">Select a role</option>
+                <option value="AGENT">Agent</option>
+                <option value="CLIENT">Client</option>
+              </select>
+              
+
+                <label for="inputEmail" class="sr-only">Number</label>
+                <input type="text" name="number"
+                [(ngModel)]="user.user_phone"class="form-control"
+                required #p="ngModel" placeholder="Your Number">
+                <label for="inputEmail" class="sr-only">Sector Activité</label>
+                <input type="text" name="Sector_activite"
+                [(ngModel)]="user.sector_activite"class="form-control"
+                required #p="ngModel" placeholder="Your Sector activite">   
+              <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" (click)="saveUser()">Add User</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
