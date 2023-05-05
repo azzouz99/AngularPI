@@ -1,0 +1,61 @@
+/* Body background */
+body {
+  background-image: url('../../assets/finance.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* Container flexbox */
+.container-fluid {
+  display: flex;
+  height: 100vh;
+}
+
+/* Colonne gauche */
+.bg-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Colonne droite */
+.card {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Form */
+.form-signin {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
+.avatar {
+  margin-bottom: 1rem;
+  max-width: 100px;
+  height: auto;
+}
+
+/* Form fields */
+.form-signin label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-signin input {
+  margin-bottom: 1rem;
+}
+
+/* Sign up button */
+.form-signin .btn {
+  margin-top: 2rem;
+}
+
+/* Already have an account */
+.form-signin .mt-5 {
+  margin-top: 1rem;
+}

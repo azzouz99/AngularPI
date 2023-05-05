@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page de connexion</title>
+  <style>
+    /* Body background */
+    body {
+      background-image: url('../../assets/finance.avif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+    }
+
+    /* Container flexbox */
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Colonne gauche */
+    
+
+    /* Colonne droite */
+    .col-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Formulaire de connexion */
+    .card {
+      max-width: 400px;
+      width: 100%;
+      margin: auto;
+    }
+    .rotate-card {
+  transform: rotateY(180deg);
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-left"></div>
+    <div class="col-right">
+      <div class="card">
+        <div class="card-body" id="login-card">
+          <form #loginForm="ngForm" (ngSubmit)="login()">
+            <h2 class="text-center mb-4">Login</h2>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control mb-3" [(ngModel)]="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Enter your password" class="form-control mb-3" [(ngModel)]="user_password" required>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </div>
+
+            <div class="text-center">
+              <a class="nav-link" routerLink="/signup" id="signup-link"  onclick="rotateCard()">Sign Up</a>
+              <a class="nav-link" [routerLink]="['/forgetPwd']"  target="_blank">Forgot Password</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
